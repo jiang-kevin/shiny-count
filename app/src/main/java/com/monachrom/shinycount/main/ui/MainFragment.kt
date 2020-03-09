@@ -1,6 +1,5 @@
-package com.monachrom.shinycount.ui.main
+package com.monachrom.shinycount.main.ui
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,8 +8,9 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
-import com.monachrom.shinycount.R
 import com.monachrom.shinycount.databinding.MainFragmentBinding
+import com.monachrom.shinycount.main.adapters.CounterViewPagerAdapter
+import com.monachrom.shinycount.main.viewmodels.MainViewModel
 
 class MainFragment : Fragment() {
 
@@ -31,7 +31,8 @@ class MainFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        viewPagerAdapter = CounterViewPagerAdapter(this)
+        viewPagerAdapter =
+            CounterViewPagerAdapter(this)
         viewPager = binding.pager
         viewPager.adapter = viewPagerAdapter
         val tabLayout = binding.counterTabLayout

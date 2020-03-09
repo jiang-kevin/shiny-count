@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.monachrom.shinycount.ui.main.MainFragment"
+        android:name="com.monachrom.shinycount.main.ui.MainFragment"
         android:label="main_fragment"
         tools:layout="@layout/main_fragment" />
 </navigation>

@@ -1,13 +1,14 @@
-package com.monachrom.shinycount
+package com.monachrom.shinycount.list
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.monachrom.shinycount.R
 
 
-import com.monachrom.shinycount.CounterFragment.OnListFragmentInteractionListener
+import com.monachrom.shinycount.list.CounterFragment.OnListFragmentInteractionListener
 import com.monachrom.shinycount.dummy.DummyContent.DummyItem
 
 import kotlinx.android.synthetic.main.fragment_counter.view.*

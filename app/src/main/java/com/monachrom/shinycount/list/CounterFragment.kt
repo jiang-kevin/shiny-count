@@ -1,4 +1,4 @@
-package com.monachrom.shinycount
+package com.monachrom.shinycount.list
 
 import android.content.Context
 import android.os.Bundle
@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.monachrom.shinycount.R
 
 import com.monachrom.shinycount.dummy.DummyContent
 import com.monachrom.shinycount.dummy.DummyContent.DummyItem
@@ -46,7 +47,11 @@ class CounterFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = CounterRecyclerViewAdapter(DummyContent.ITEMS, listener)
+                adapter =
+                    CounterRecyclerViewAdapter(
+                        DummyContent.ITEMS,
+                        listener
+                    )
             }
         }
         return view

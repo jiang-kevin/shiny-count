@@ -1,10 +1,10 @@
-package com.monachrom.shinycount.ui.main
+package com.monachrom.shinycount.main.adapters
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.monachrom.shinycount.CounterDetailFragment
-import com.monachrom.shinycount.CounterFragment
+import com.monachrom.shinycount.detail.CounterDetailFragment
+import com.monachrom.shinycount.list.CounterFragment
 
 private const val ARG_OBJECT = "object"
 

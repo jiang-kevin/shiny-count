@@ -1,8 +1,9 @@
-package com.monachrom.shinycount
+package com.monachrom.shinycount.main.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.monachrom.shinycount.ui.main.MainFragment
+import com.monachrom.shinycount.R
+import com.monachrom.shinycount.main.ui.MainFragment
 
 class MainActivity : AppCompatActivity() {
 

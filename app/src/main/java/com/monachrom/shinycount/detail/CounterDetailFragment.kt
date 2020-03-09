@@ -1,19 +1,19 @@
-package com.monachrom.shinycount
+package com.monachrom.shinycount.detail
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.monachrom.shinycount.ui.main.MainViewModel
+import com.monachrom.shinycount.R
 
 
 class CounterDetailFragment : Fragment() {
 
     companion object {
-        fun newInstance() = CounterDetailFragment()
+        fun newInstance() =
+            CounterDetailFragment()
     }
 
     private lateinit var viewModel: CounterDetailViewModel
