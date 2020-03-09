@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.monachrom.shinycount.detail.CounterDetailFragment
-import com.monachrom.shinycount.list.CounterFragment
+import com.monachrom.shinycount.list.ui.CounterFragment
 
 private const val ARG_OBJECT = "object"
 

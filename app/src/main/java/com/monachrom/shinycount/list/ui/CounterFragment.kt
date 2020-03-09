@@ -1,4 +1,4 @@
-package com.monachrom.shinycount.list
+package com.monachrom.shinycount.list.ui
 
 import android.content.Context
 import android.os.Bundle
@@ -13,6 +13,7 @@ import com.monachrom.shinycount.R
 
 import com.monachrom.shinycount.dummy.DummyContent
 import com.monachrom.shinycount.dummy.DummyContent.DummyItem
+import com.monachrom.shinycount.list.adapters.CounterRecyclerViewAdapter
 
 /**
  * A fragment representing a list of Items.
