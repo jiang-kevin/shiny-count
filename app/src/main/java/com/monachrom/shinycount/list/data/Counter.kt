@@ -11,6 +11,6 @@ data class Counter(
     val name: String,
     val pokemon: String,
     val method: String,
-    @ColumnInfo(name = "start_date") val startDate: Date,
+    @ColumnInfo(name = "start_date") val startDate: Long,
     val count: Int
 )

@@ -8,7 +8,7 @@ import android.widget.TextView
 import com.monachrom.shinycount.R
 
 
-import com.monachrom.shinycount.list.ui.CounterFragment.OnListFragmentInteractionListener
+import com.monachrom.shinycount.list.ui.CounterListFragment.OnListFragmentInteractionListener
 import com.monachrom.shinycount.dummy.DummyContent.DummyItem
 
 import kotlinx.android.synthetic.main.fragment_counter.view.*

@@ -1,11 +1,8 @@
 package com.monachrom.shinycount.list.data
 
-import androidx.room.Delete
-import androidx.room.Entity
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 
-@Entity
+@Dao
 interface CounterDao {
     @Query("SELECT * FROM counter")
     fun getAll(): List<Counter>
