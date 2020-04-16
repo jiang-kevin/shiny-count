@@ -14,7 +14,7 @@
         android:layout_marginRight="16dp"
         app:layoutManager="LinearLayoutManager"
         tools:context=".list.ui.CounterListFragment"
-        tools:listitem="@layout/fragment_counter" >
+        tools:listitem="@layout/fragment_counter_item" >
 
     </androidx.recyclerview.widget.RecyclerView>
 

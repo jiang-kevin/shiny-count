@@ -1,4 +1,4 @@
-package com.monachrom.shinycount
+package com.monachrom.shinycount.list.viewmodels
 
 import androidx.lifecycle.ViewModel
 

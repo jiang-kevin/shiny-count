@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="methods_array">
+        <item>Masuda Method</item>
+        <item>Wild Encounters</item>
+    </string-array>
+</resources>

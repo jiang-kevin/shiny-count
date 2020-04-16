@@ -1,4 +1,4 @@
-package com.monachrom.shinycount.list.data
+package com.monachrom.shinycount.main.data
 
 import androidx.room.*
 

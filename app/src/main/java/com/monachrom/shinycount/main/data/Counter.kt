@@ -1,9 +1,8 @@
-package com.monachrom.shinycount.list.data
+package com.monachrom.shinycount.main.data
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.*
 
 @Entity
 data class Counter(

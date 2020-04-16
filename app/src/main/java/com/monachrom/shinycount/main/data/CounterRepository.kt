@@ -1,6 +1,4 @@
-package com.monachrom.shinycount.list.data
-
-import androidx.lifecycle.LiveData
+package com.monachrom.shinycount.main.data
 
 class CounterRepository(private val counterDao: CounterDao) {
 

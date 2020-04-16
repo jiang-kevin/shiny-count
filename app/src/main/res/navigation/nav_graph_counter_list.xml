@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/newCounterFragment2"
-        android:name="com.monachrom.shinycount.NewCounterFragment"
+        android:name="com.monachrom.shinycount.list.ui.NewCounterFragment"
         android:label="fragment_new_counter"
         tools:layout="@layout/fragment_new_counter" />
 </navigation>

@@ -11,7 +11,7 @@ import com.monachrom.shinycount.R
 import com.monachrom.shinycount.list.ui.CounterListFragment.OnListFragmentInteractionListener
 import com.monachrom.shinycount.dummy.DummyContent.DummyItem
 
-import kotlinx.android.synthetic.main.fragment_counter.view.*
+import kotlinx.android.synthetic.main.fragment_counter_item.view.*
 
 /**
  * [RecyclerView.Adapter] that can display a [DummyItem] and makes a call to the
@@ -36,7 +36,7 @@ class CounterRecyclerViewAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.fragment_counter, parent, false)
+            .inflate(R.layout.fragment_counter_item, parent, false)
         return ViewHolder(view)
     }
 
