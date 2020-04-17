@@ -10,6 +10,7 @@ import com.monachrom.shinycount.R
 
 import com.monachrom.shinycount.list.ui.CounterListFragment.OnListFragmentInteractionListener
 import com.monachrom.shinycount.dummy.DummyContent.DummyItem
+import com.monachrom.shinycount.main.data.Counter
 
 import kotlinx.android.synthetic.main.fragment_counter_item.view.*
 
@@ -19,18 +20,18 @@ import kotlinx.android.synthetic.main.fragment_counter_item.view.*
  * TODO: Replace the implementation with code for your data type.
  */
 class CounterRecyclerViewAdapter(
-    private val mValues: List<DummyItem>,
-    private val mListener: OnListFragmentInteractionListener?
+    private val listener: OnListFragmentInteractionListener?
 ) : RecyclerView.Adapter<CounterRecyclerViewAdapter.ViewHolder>() {
 
+    var values: List<Counter> = emptyList()
     private val mOnClickListener: View.OnClickListener
 
     init {
         mOnClickListener = View.OnClickListener { v ->
-            val item = v.tag as DummyItem
+            val item = v.tag as Counter
             // Notify the active callbacks interface (the activity, if the fragment is attached to
             // one) that an item has been selected.
-            mListener?.onListFragmentInteraction(item)
+            listener?.onListFragmentInteraction(item)
         }
     }
 
@@ -41,24 +42,24 @@ class CounterRecyclerViewAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = mValues[position]
-        holder.mIdView.text = item.id
-        holder.mContentView.text = item.content
+        val item = values[position]
+        holder.nameView.text = item.name
+        holder.pokemonView.text = item.pokemon
 
-        with(holder.mView) {
+        with(holder.view) {
             tag = item
             setOnClickListener(mOnClickListener)
         }
     }
 
-    override fun getItemCount(): Int = mValues.size
+    override fun getItemCount(): Int = values.size
 
-    inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
-        val mIdView: TextView = mView.item_number
-        val mContentView: TextView = mView.content
+    inner class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
+        val nameView: TextView = view.item_name
+        val pokemonView: TextView = view.item_pokemon
 
         override fun toString(): String {
-            return super.toString() + " '" + mContentView.text + "'"
+            return super.toString() + " '" + nameView.text + "'"
         }
     }
 }

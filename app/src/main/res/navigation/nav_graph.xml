@@ -3,11 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/counterListFragment">
 
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.monachrom.shinycount.main.ui.MainFragment"
-        android:label="main_fragment"
-        tools:layout="@layout/main_fragment" />
+        android:id="@+id/counterListFragment"
+        android:name="com.monachrom.shinycount.list.ui.CounterListFragment"
+        android:label="CounterListFragment" >
+        <action
+            android:id="@+id/action_new_counter"
+            app:destination="@id/newCounterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newCounterFragment"
+        android:name="com.monachrom.shinycount.list.ui.NewCounterFragment"
+        android:label="fragment_new_counter"
+        tools:layout="@layout/fragment_new_counter" >
+        <action
+            android:id="@+id/action_counter_created"
+            app:destination="@id/counterListFragment" />
+    </fragment>
 </navigation>

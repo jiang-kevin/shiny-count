@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.monachrom.shinycount.R
 import com.monachrom.shinycount.databinding.FragmentCounterListBinding
@@ -15,6 +17,9 @@ import com.monachrom.shinycount.databinding.FragmentCounterListBinding
 import com.monachrom.shinycount.dummy.DummyContent
 import com.monachrom.shinycount.dummy.DummyContent.DummyItem
 import com.monachrom.shinycount.list.adapters.CounterRecyclerViewAdapter
+import com.monachrom.shinycount.list.viewmodels.CounterListViewModel
+import com.monachrom.shinycount.main.data.Counter
+import com.monachrom.shinycount.utilities.InjectorUtils
 
 /**
  * A fragment representing a list of Items.
@@ -26,6 +31,10 @@ class CounterListFragment : Fragment() {
     private lateinit var binding: FragmentCounterListBinding
     private var columnCount = 1
     private var listener: OnListFragmentInteractionListener? = null
+    private val viewModel: CounterListViewModel by viewModels {
+        InjectorUtils.provideCounterListViewModelFactory(activity as Context)
+    }
+    private val viewAdapter = CounterRecyclerViewAdapter(listener)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,13 +56,8 @@ class CounterListFragment : Fragment() {
                 columnCount <= 1 -> LinearLayoutManager(context)
                 else -> GridLayoutManager(context, columnCount)
             }
-            adapter =
-                CounterRecyclerViewAdapter(
-                    DummyContent.ITEMS,
-                    listener
-                )
+            adapter = viewAdapter
         }
-
         return binding.root
     }
 
@@ -63,6 +67,11 @@ class CounterListFragment : Fragment() {
             val action = CounterListFragmentDirections.actionNewCounter()
             findNavController().navigate(action)
         }
+
+        viewModel.counters.observe(viewLifecycleOwner, Observer {
+            viewAdapter.values = it
+            viewAdapter.notifyDataSetChanged()
+        })
     }
 
     override fun onAttach(context: Context) {
@@ -92,7 +101,7 @@ class CounterListFragment : Fragment() {
      */
     interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        fun onListFragmentInteraction(item: DummyItem?)
+        fun onListFragmentInteraction(item: Counter?)
     }
 
     companion object {

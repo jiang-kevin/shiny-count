@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
 import com.monachrom.shinycount.R
-import com.monachrom.shinycount.main.ui.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
