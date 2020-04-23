@@ -6,6 +6,7 @@
     tools:context=".detail.CounterDetailFragment">
 
     <TextView
+        android:id="@+id/text_counter_detail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="jskal;" />

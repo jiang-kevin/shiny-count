@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_new_counter"
             app:destination="@id/newCounterFragment" />
+        <action
+            android:id="@+id/action_list_to_detail"
+            app:destination="@id/counterDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/newCounterFragment"
@@ -21,5 +24,15 @@
         <action
             android:id="@+id/action_counter_created"
             app:destination="@id/counterListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/counterDetailFragment"
+        android:name="com.monachrom.shinycount.detail.CounterDetailFragment"
+        android:label="counter_detail_fragment"
+        tools:layout="@layout/counter_detail_fragment" >
+        <argument
+            android:name="counterID"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
 </navigation>

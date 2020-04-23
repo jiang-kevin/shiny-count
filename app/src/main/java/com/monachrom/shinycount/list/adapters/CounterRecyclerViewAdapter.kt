@@ -5,11 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.findNavController
 import com.monachrom.shinycount.R
 
 
 import com.monachrom.shinycount.list.ui.CounterListFragment.OnListFragmentInteractionListener
 import com.monachrom.shinycount.dummy.DummyContent.DummyItem
+import com.monachrom.shinycount.list.ui.CounterListFragmentDirections
 import com.monachrom.shinycount.main.data.Counter
 
 import kotlinx.android.synthetic.main.fragment_counter_item.view.*
@@ -32,6 +34,10 @@ class CounterRecyclerViewAdapter(
             // Notify the active callbacks interface (the activity, if the fragment is attached to
             // one) that an item has been selected.
             listener?.onListFragmentInteraction(item)
+
+            val counterID = item.id
+            val action = CounterListFragmentDirections.actionListToDetail(counterID)
+            v.findNavController().navigate(action)
         }
     }
 
