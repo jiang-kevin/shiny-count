@@ -1,6 +1,8 @@
 package com.monachrom.shinycount.utilities
 
 import android.content.Context
+import androidx.savedstate.SavedStateRegistryOwner
+import com.monachrom.shinycount.detail.CounterDetailViewModelFactory
 import com.monachrom.shinycount.list.viewmodels.CounterListViewModelFactory
 import com.monachrom.shinycount.list.viewmodels.NewCounterViewModelFactory
 import com.monachrom.shinycount.main.data.AppDatabase
@@ -21,5 +23,12 @@ object InjectorUtils {
     fun provideCounterListViewModelFactory(context: Context): CounterListViewModelFactory {
         val repository = getCounterRepository(context)
         return CounterListViewModelFactory(repository)
+    }
+
+    fun provideCounterDetailViewModelFactory(
+        context: Context, counterID: Int
+    ): CounterDetailViewModelFactory {
+        val repository = getCounterRepository(context)
+        return CounterDetailViewModelFactory(repository, counterID)
     }
 }

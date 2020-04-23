@@ -29,7 +29,7 @@
         android:id="@+id/counterDetailFragment"
         android:name="com.monachrom.shinycount.detail.CounterDetailFragment"
         android:label="counter_detail_fragment"
-        tools:layout="@layout/counter_detail_fragment" >
+        tools:layout="@layout/fragment_counter_detail" >
         <argument
             android:name="counterID"
             app:argType="integer"

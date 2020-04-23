@@ -1,12 +1,9 @@
 package com.monachrom.shinycount.list.ui
 
-import android.content.Context
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
@@ -25,7 +22,7 @@ class NewCounterFragment : Fragment() {
 
     private lateinit var binding: FragmentNewCounterBinding
     private val viewModel: NewCounterViewModel by viewModels {
-        InjectorUtils.provideNewCounterViewModelFactory(activity as Context)
+        InjectorUtils.provideNewCounterViewModelFactory(requireActivity())
     }
     private lateinit var dropdownMenuAdapter: ArrayAdapter<CharSequence>
 

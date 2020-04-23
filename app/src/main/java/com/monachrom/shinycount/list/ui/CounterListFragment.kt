@@ -32,7 +32,7 @@ class CounterListFragment : Fragment() {
     private var columnCount = 1
     private var listener: OnListFragmentInteractionListener? = null
     private val viewModel: CounterListViewModel by viewModels {
-        InjectorUtils.provideCounterListViewModelFactory(activity as Context)
+        InjectorUtils.provideCounterListViewModelFactory(requireActivity())
     }
     private val viewAdapter = CounterRecyclerViewAdapter(listener)
 

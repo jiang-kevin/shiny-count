@@ -6,6 +6,10 @@ class CounterRepository(private val counterDao: CounterDao) {
         return counterDao.getAll()
     }
 
+    fun findByID(id: Int): Counter {
+        return counterDao.findById(id)
+    }
+
     fun insert(counter: Counter) {
         counterDao.insertAll(counter)
     }

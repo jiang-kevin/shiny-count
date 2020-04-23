@@ -7,4 +7,5 @@
     <string name="hint_new_counter_pokemon">Pokémon</string>
     <string name="hint_new_counter_method">Method</string>
     <string name="action_create_counter">Create counter</string>
+    <string name="content_desc_counter_image">Image of the Pokémon</string>
 </resources>
