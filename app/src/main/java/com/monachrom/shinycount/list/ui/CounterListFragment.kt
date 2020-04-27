@@ -2,6 +2,7 @@ package com.monachrom.shinycount.list.ui
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -102,7 +103,9 @@ class CounterListFragment : Fragment() {
      */
     interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        fun onListFragmentInteraction(item: Counter?)
+        fun onListFragmentInteraction(item: Counter?) {
+            Log.d("TEST", item.toString())
+        }
     }
 
     companion object {

@@ -25,11 +25,9 @@
             android:name="com.monachrom.shinycount.CounterFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
             app:layoutManager="LinearLayoutManager"
             tools:context=".list.ui.CounterListFragment"
-            tools:listitem="@layout/fragment_counter_item" >
+            tools:listitem="@layout/fragment_counter_item">
 
         </androidx.recyclerview.widget.RecyclerView>
 

@@ -11,10 +11,14 @@
         android:label="CounterListFragment" >
         <action
             android:id="@+id/action_new_counter"
-            app:destination="@id/newCounterFragment" />
+            app:destination="@id/newCounterFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/action_list_to_detail"
-            app:destination="@id/counterDetailFragment" />
+            app:destination="@id/counterDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/newCounterFragment"
@@ -23,7 +27,9 @@
         tools:layout="@layout/fragment_new_counter" >
         <action
             android:id="@+id/action_counter_created"
-            app:destination="@id/counterListFragment" />
+            app:destination="@id/counterListFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/counterDetailFragment"
