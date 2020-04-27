@@ -17,7 +17,14 @@ class CounterDetailViewModel(
     private val mutableCounter: MutableLiveData<Counter> = MutableLiveData()
     val counter: LiveData<Counter> by lazy { mutableCounter }
 
+    var incrementSize: Int = 1
+
     init {
+        loadCounter()
+    }
+
+    fun incrementCounter() = viewModelScope.launch(Dispatchers.IO) {
+        counterRepository.addToCount(counterID, incrementSize)
         loadCounter()
     }
 

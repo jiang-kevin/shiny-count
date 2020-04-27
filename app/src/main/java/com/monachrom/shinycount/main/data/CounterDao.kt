@@ -13,6 +13,9 @@ interface CounterDao {
     @Insert
     fun insertAll(vararg counters: Counter)
 
+    @Update
+    fun updateAll(vararg counters: Counter)
+
     @Delete
     fun delete(counter: Counter)
 }

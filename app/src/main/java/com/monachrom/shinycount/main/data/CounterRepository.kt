@@ -13,4 +13,10 @@ class CounterRepository(private val counterDao: CounterDao) {
     fun insert(counter: Counter) {
         counterDao.insertAll(counter)
     }
+
+    fun addToCount(id: Int, number: Int) {
+        val currentCounter = counterDao.findById(id)
+        currentCounter.count += number
+        counterDao.updateAll(currentCounter)
+    }
 }

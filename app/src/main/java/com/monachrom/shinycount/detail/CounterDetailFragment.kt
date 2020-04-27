@@ -47,6 +47,10 @@ class CounterDetailFragment : Fragment() {
             }
         })
 
+        binding.buttonCounterIncrement.setOnClickListener {
+            viewModel.incrementCounter()
+        }
+
         super.onViewCreated(view, savedInstanceState)
     }
 
